@@ -41,7 +41,7 @@ public class Task2Test {
 
         String arguments = "Аргументи: age: " + age;
 
-        assertEquals(expectedOutput, actualOutput, arguments);
+        assertEquals(arguments, expectedOutput, actualOutput);
     }
 
     private static Stream<Arguments> firstTaskTestData() {
@@ -71,18 +71,16 @@ public class Task2Test {
                 price;
 
         Assertions.assertEquals(expectedOutput, actualOutput, arguments);
-
-        assertEquals(expectedOutput, actualOutput, arguments);
     }
 
     private static Stream<Arguments> secondTaskTestData() {
         return Stream.of(
                 Arguments.of(18, 50, 50, "Пригощайся!"),
-                Arguments.of(18, 50, 49.9999999999f, "Пригощайся!"),
-                Arguments.of(18, 50, 50.0000000001f, "Вибач, але в тебе недостатньо грошей!"),
+                Arguments.of(18, 50, 49.9999999999, "Пригощайся!"),
+                Arguments.of(18, 50, 50.0000000001, "Вибач, але в тебе недостатньо грошей!"),
                 Arguments.of(17, 50, 50, "Вибач, але пиво тільки для дорослих!"),
-                Arguments.of(17, 50, 49.9999999999f, "Вибач, але пиво тільки для дорослих!"),
-                Arguments.of(17, 50, 50.0000000001f, "Вибач, але пиво тільки для дорослих!"),
+                Arguments.of(17, 50, 49.9999999999, "Вибач, але пиво тільки для дорослих!"),
+                Arguments.of(17, 50, 50.0000000001, "Вибач, але пиво тільки для дорослих!"),
                 Arguments.of(17, -500, 500, "Вибач, але пиво тільки для дорослих!"),
                 Arguments.of(18, -500, 500, "Вибач, але в тебе недостатньо грошей!")
         );
