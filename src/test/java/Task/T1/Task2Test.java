@@ -1,6 +1,5 @@
 package Task.T1;
 
-import org.junit.Before;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -11,7 +10,6 @@ import task.T1.Task2;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.Arrays;
 import java.util.stream.Stream;
 
 import static org.junit.Assert.assertEquals;
