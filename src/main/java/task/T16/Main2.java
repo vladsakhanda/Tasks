@@ -1,7 +1,7 @@
 package task.T16;
 
 public class Main2 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Library library = new Library();
 
         Library.ReaderCard reader1 = new Library.ReaderCard("Josh");
@@ -19,8 +19,10 @@ public class Main2 {
         library.addReader("Josh");
         library.addReader("Jung");
 
-        reader1.displayReaderCard();
-        reader2.displayReaderCard();
+        library.delReaderCard("Josh");
+
+
+
 
         library.displayReader();
 
