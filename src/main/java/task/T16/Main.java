@@ -1,7 +1,7 @@
 package task.T16;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         Company company = new Company();
 
@@ -17,13 +17,13 @@ public class Main {
         hrDepartment.addWorkstation("Workstation 2");
 
 
-        company.addDepartment("it");
-        company.addDepartment("hr");
 
 
-        company.displayDepartments();
+
+//        company.displayDepartments();
 
         itDepartment.delWorkstation("Workstation 1");
+
 
         itDepartment.displayWorkstations();
         hrDepartment.displayWorkstations();

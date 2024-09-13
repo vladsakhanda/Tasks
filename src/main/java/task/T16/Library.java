@@ -4,22 +4,14 @@ import java.util.Arrays;
 
 public class Library {
     private String[] readerCard = {};
-    // static
-
-    private Reader[] readers = {};
-
-    public void displayFullInfo() {
-        for (Reader reader : readers) {
-            System.out.println(reader.getName());
-            System.out.println(Arrays.toString(reader.getBorrowedBooks()));
-            System.out.println(Arrays.toString(reader.getReturnedBooks()));
-        }
-    }
 
     public void addReader(String name) {
-        readerCard = Arrays.copyOf(readerCard, readerCard.length + 1);
+        readerCard = Arrays.copyOf(readerCard, readerCard.length +1);
         readerCard[readerCard.length - 1] = name;
     }
+
+
+
 
     public void displayReader() {
         for (int i = 0; i < readerCard.length; i++) {
@@ -39,8 +31,8 @@ public class Library {
         }
 
         public void borrowBook(String book) {
-            borrowedBooks = Arrays.copyOf(borrowedBooks, borrowedBooks.length + 1);
-            borrowedBooks[borrowedBooks.length - 1] = book;
+            borrowedBooks = Arrays.copyOf(borrowedBooks, borrowedBooks.length +1);
+            borrowedBooks[borrowedBooks.length-1] = book;
         }
 
         public void returnBook(String book) {
@@ -50,13 +42,13 @@ public class Library {
                     index = i;
                 }
             }
-            for (int j = index + 1; j < borrowedBooks.length; j++) {
-                borrowedBooks[j - 1] = borrowedBooks[j];
+            for (int j = index+1; j < borrowedBooks.length; j++) {
+                borrowedBooks[j-1] = borrowedBooks[j];
             }
-            borrowedBooks = Arrays.copyOf(borrowedBooks, borrowedBooks.length - 1);
+            borrowedBooks = Arrays.copyOf(borrowedBooks, borrowedBooks.length -1);
 
-            returnedBooks = Arrays.copyOf(returnedBooks, returnedBooks.length + 1);
-            returnedBooks[returnedBooks.length - 1] = book;
+            returnedBooks = Arrays.copyOf(returnedBooks, returnedBooks.length +1);
+            returnedBooks[returnedBooks.length-1] = book;
         }
 
 
