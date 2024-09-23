@@ -45,15 +45,7 @@ public class Reader {
         return returnedBooks.clone();
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    public void setBorrowedBooks(String[] borrowedBooks) {
-        this.borrowedBooks = borrowedBooks;
-    }
 
-    public void setReturnedBooks(String[] returnedBooks) {
-        this.returnedBooks = returnedBooks;
-    }
+
 }

@@ -4,31 +4,20 @@ public class Main2 {
     public static void main(String[] args) throws Exception {
         Library library = new Library();
 
-        Library.ReaderCard reader1 = new Library.ReaderCard("Josh");
-        Library.ReaderCard reader2 = new Library.ReaderCard("Jung");
+        Reader reader1 = new Reader("Josh");
+        Reader reader2 = new Reader("Jon");
 
 
-        reader1.borrowBook("B1");
-        reader1.borrowBook("B2");
-        reader1.returnBook("B1");
-
-        reader2.borrowBook("B1");
-        reader2.borrowBook("B2");
-        reader2.returnBook("B1");
-
-        library.addReader("Josh");
-        library.addReader("Jung");
-
-        library.delReaderCard("Josh");
-
-
-
-
+        library.addReader(reader1);
+        library.addReader(reader2);
+        reader1.borrowBook("sswswww");
+        reader1.borrowBook("ss");
+        reader1.returnBook("ss");
+        reader2.borrowBook("sswswww");
+        reader2.borrowBook("ss");
+        reader2.returnBook("ss");
+        library.delReaderCard(reader1);
         library.displayReader();
-
-
-
-
 
     }
 }

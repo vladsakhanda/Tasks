@@ -3,67 +3,46 @@ package task.T16;
 import java.util.Arrays;
 
 public class Library {
-    private String[] readerCard = {};
+    static private Reader[] readers = {};
 
-    public void addReader(String name) {
-        readerCard = Arrays.copyOf(readerCard, readerCard.length +1);
-        readerCard[readerCard.length - 1] = name;
+
+    public void addReader(Reader name) {
+        readers = Arrays.copyOf(readers, readers.length + 1);
+        readers[readers.length - 1] = name;
     }
 
+    public void delReaderCard(Reader name) throws Exception {
+        for (int i = 0; i < readers.length; i++) {
+            if (name.equals(readers[i])) {
+                for (int j = i + 1; j < readers.length; j++) {
+                    readers[j - 1] = readers[j];
 
+                }
+                readers = Arrays.copyOf(readers, readers.length - 1);
+                break;
 
-
-    public void displayReader() {
-        for (int i = 0; i < readerCard.length; i++) {
-            System.out.println("Reader: " + readerCard[i]);
-
+            } else if (i == readers.length - 1) {
+                throw new Exception("Такого читача не існує");
+            }
         }
     }
 
-    public static class ReaderCard {
-        private String readerName;
-        private String[] borrowedBooks = {};
-        private String[] returnedBooks = {};
-
-
-        public ReaderCard(String readerName) {
-            this.readerName = readerName;
-        }
-
-        public void borrowBook(String book) {
-            borrowedBooks = Arrays.copyOf(borrowedBooks, borrowedBooks.length +1);
-            borrowedBooks[borrowedBooks.length-1] = book;
-        }
-
-        public void returnBook(String book) {
-            int index = 1;
-            for (int i = 0; i < borrowedBooks.length; i++) {
-                if (book.equals(borrowedBooks[i])) {
-                    index = i;
+        public void displayReader() {
+            for (int i = 0; i < readers.length; i++) {
+                System.out.println("Reader name:" + readers[i].getName());
+                System.out.println("Borrow books:");
+                for (int j = 0; j < readers[i].getBorrowedBooks().length; j++) {
+                    System.out.println(readers[i].getBorrowedBooks()[j]);
+                }
+                System.out.println("Return books:");
+                for (int j = 0; j < readers[i].getReturnedBooks().length; j++) {
+                    System.out.println(readers[i].getReturnedBooks()[j]);
                 }
             }
-            for (int j = index+1; j < borrowedBooks.length; j++) {
-                borrowedBooks[j-1] = borrowedBooks[j];
-            }
-            borrowedBooks = Arrays.copyOf(borrowedBooks, borrowedBooks.length -1);
 
-            returnedBooks = Arrays.copyOf(returnedBooks, returnedBooks.length +1);
-            returnedBooks[returnedBooks.length-1] = book;
-        }
-
-
-        public void displayReaderCard() {
-            System.out.println("Reader " + readerName + ":");
-            System.out.println("Borrowed:");
-            for (int i = 0; i < borrowedBooks.length; i++) {
-                System.out.println(" - " + borrowedBooks[i]);
-            }
-            System.out.println("Returted:");
-            for (int i = 0; i < returnedBooks.length; i++) {
-                System.out.println(" - " + returnedBooks[i]);
-            }
         }
 
 
     }
-}
+
+
