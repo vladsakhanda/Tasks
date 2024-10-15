@@ -1,7 +1,5 @@
 package task.T18;
 
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) throws Exception {
         Zoo zoo1 = new Zoo("Zoo");
@@ -40,7 +38,7 @@ public class Main {
          employee.delAviary(aviary2);
          employee.display();
 
-         zoo1.findedType("Tiger");
+         zoo1.foundTypes("Tiger");
 
         zoo1.displayAviary();
 

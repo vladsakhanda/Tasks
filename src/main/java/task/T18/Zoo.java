@@ -9,6 +9,7 @@ public class Zoo {
     Zoo(String name) {
         this.name = name;
     }
+
     public void addAviary(Aviary aviary) {
         aviaries = Arrays.copyOf(aviaries, aviaries.length + 1);
         aviaries[aviaries.length - 1] = aviary;
@@ -33,24 +34,23 @@ public class Zoo {
 
     public void displayAviary() {
         for (int i = 0; i < aviaries.length; i++) {
-            System.out.println("Name: "+ aviaries[i].getName());
+            System.out.println("Name: " + aviaries[i].getName());
             aviaries[i].displayAviary();
         }
     }
 
-    public void findedType(String type) {
-         String[] animalTypes = {};
-        for (int i = 0; i < aviaries.length; i++) {
-            for (int j = 0; j < aviaries[i].animals.length; j++) {
-               if (aviaries[i].animals[j].getType().equals(type))  {
-                   animalTypes = Arrays.copyOf(animalTypes, animalTypes.length + 1);
-                   animalTypes[aviaries[i].animals.length - 1] = aviaries[i].animals[j].getType();
-               }
+    public void foundTypes(String type) {
+        String[] animalTypes = {};
+        for (Aviary aviary : aviaries) {
+            for (Animal animal : aviary.animals) {
+                if (animal.getType().equals(type)) {
+                    animalTypes = Arrays.copyOf(animalTypes, animalTypes.length + 1);
+                    animalTypes[animalTypes.length - 1] = animal.getType();
+                }
             }
         }
         System.out.println(Arrays.toString(animalTypes));
     }
-
 
 
 }

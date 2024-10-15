@@ -1,6 +1,6 @@
 package task.T18;
 
- public abstract   class Animal {
+public abstract class Animal {
     private String name;
     private int age;
     private String type;
@@ -36,9 +36,7 @@ package task.T18;
         this.type = type;
     }
 
-   public abstract void makeNoise();
-
-
+    public abstract void makeNoise();
 
 
 }
