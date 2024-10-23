@@ -14,12 +14,9 @@ public class Person {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj == null || this.getClass() != obj.getClass()) {
+        if (!(obj instanceof Person person)) {
             return false;
         }
-
-        Person person = (Person) obj;
-
         return this.name == person.name && this.age == person.age && this.character == person.character;
     }
 

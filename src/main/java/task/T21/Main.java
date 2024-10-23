@@ -54,20 +54,25 @@ public class Main {
 //        ArrayList<String> arrayList = new ArrayList<>();
 //        HashMap<Person, String> map = null;
 
-        Person person1 = new Person("Яна", 89, "Angry, Funny");
-        Person person2 = new Person("Яна", 89, "Angry, Funny");
-        Person person3 = new Person("Яна", 35, "Angry, Funny");
-        Person person4 = new Person("Тома", 35, "Angry, Funny");
-//        System.out.println(person1.hashCode());
+//        Person person1 = new Person("Яна", 89, "Angry, Funny");
+//        Person person2 = new Person("Яна", 89, "Angry, Funny");
+//        Person person3 = new Person("Яна", 35, "Angry, Funny");
+//        Person person4 = new Person("Тома", 35, "Angry, Funny");
+////        System.out.println(person1.hashCode());
+//
+//        ArrayList<Person> people = new ArrayList<>();
+//        people.add(person1);
+//        people.add(person2);
+//        people.add(person3);
+//        people.add(person4);
+//        for (Person person : people) {
+//            System.out.println(person.hashCode());
+//        }
 
-        ArrayList<Person> people = new ArrayList<>();
-        people.add(person1);
-        people.add(person2);
-        people.add(person3);
-        people.add(person4);
-        for (Person person : people) {
-            System.out.println(person.hashCode());
-        }
+//        Object text = new String();
+//        System.out.println(text instanceof String);
+//        System.out.println(text instanceof Arrays);
+
 
     }
 }
