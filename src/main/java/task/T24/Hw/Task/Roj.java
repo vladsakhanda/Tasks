@@ -1,19 +1,25 @@
 package task.T24.Hw.Task;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public final class Roj {
-    private int[] elements;
+    private ArrayList<Integer> elements;
     private int age;
 
-    public Roj(int age, int[] elements) {
-        this.elements = elements;
+
+    public Roj(int age, ArrayList<Integer> elements) {
+        this.elements = new ArrayList<>(elements);
         this.age = age;
     }
 
-    public int[] getElements() {
-        return elements.clone();
+    public ArrayList<Integer> getElements() {
+        return new ArrayList<>(elements);
     }
 
     public int getAge() {
         return age;
     }
+
+
 }
