@@ -11,24 +11,24 @@ public class Main {
 //        hashMap.put("М", 0);
 //        hashMap.put("Карина", 0);
 
-        SortedSet<String> sortedSet = new TreeSet<>(new StringComparator());
-
-        sortedSet.add("sdfsd");
-        sortedSet.add("sdasdasdsa");
-        sortedSet.add("htyjuyjkjhk");
-        sortedSet.add("gfhgfh");
-        sortedSet.add("tGH");
-        sortedSet.add("tGH");
-        sortedSet.add("Jwe");
-
-        System.out.println(sortedSet);
+//        SortedSet<String> sortedSet = new TreeSet<>(new StringComparator());
 //
-//        SortedSet<Person> sortedSet = new TreeSet<>();
-//
-//        sortedSet.add(new Person("Oleksandr", 5));
-//        sortedSet.add(new Person("Oleksandr",44));
+//        sortedSet.add("sdfsd");
+//        sortedSet.add("sdasdasdsa");
+//        sortedSet.add("htyjuyjkjhk");
+//        sortedSet.add("gfhgfh");
+//        sortedSet.add("tGH");
+//        sortedSet.add("tGH");
+//        sortedSet.add("Jwe");
 //
 //        System.out.println(sortedSet);
+//
+        SortedSet<Person> sortedSet = new TreeSet<>();
+
+        sortedSet.add(new Person("Oleksandr", 5));
+        sortedSet.add(new Person("Oleksandr",44));
+
+        System.out.println(sortedSet);
 
 //        HashSet<Person> hashSet = new HashSet<>();
 //
@@ -87,7 +87,7 @@ class Person implements Comparable<Person> {
 
     @Override
     public String toString() {
-        return name;
+        return name+age;
     }
 
     /* Якщо отримуємо мінусове число, то елемент зліва буде розташований справа від елемента з яким порівнюють (елемент, що є параметром)
