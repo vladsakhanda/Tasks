@@ -4,11 +4,12 @@ import java.util.Arrays;
 
 public class Main2 {
     public static void main(String[] args) {
-deleteCharInString("Index", 1);
+        String newString = deleteCharInString("Index", 5);
+        System.out.println(newString);
     }
 
-    private static void deleteCharInString(String str, int index) {
-       char[] arr = {};
+    private static String deleteCharInString(String str, int index) {
+        char[] arr = {};
         for (int i = 0; i < str.length(); i++) {
             if (i == index) {
                 continue;
@@ -16,7 +17,7 @@ deleteCharInString("Index", 1);
             arr = Arrays.copyOf(arr, arr.length + 1);
             arr[arr.length - 1] = str.charAt(i);
         }
-        System.out.println(arr);
+        return String.valueOf(arr);
     }
 
 

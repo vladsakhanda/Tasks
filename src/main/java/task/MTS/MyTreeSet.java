@@ -2,6 +2,8 @@ package task.MTS;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
+import java.util.TreeSet;
 
 public class MyTreeSet<T> {
     private Object[] elements = {};
@@ -23,13 +25,12 @@ public class MyTreeSet<T> {
     }
 
     public void addLast(T element) {
-        HashSet<T> set = new HashSet<>(elements);
-            elements = Arrays.copyOf(elements, elements.length +1);
-            elements[elements.length-1] = element;
+        elements = Arrays.copyOf(elements, elements.length + 1);
+        elements[elements.length - 1] = element;
     }
 
-    public void removeLast()  {
-        elements = Arrays.copyOf(elements, elements.length -1);
+    public void removeLast() {
+        elements = Arrays.copyOf(elements, elements.length - 1);
     }
 
 

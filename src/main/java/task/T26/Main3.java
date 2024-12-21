@@ -4,30 +4,57 @@ import java.util.Arrays;
 
 public class Main3 {
     public static void main(String[] args) {
-        System.out.println(newCharAt("abcd", -19));
+        String testString = "abcd";
+        System.out.println(newCharAt(testString, -8));
+        System.out.println(newCharAt(testString, -19));
+        for (int i = 3; i > -100; i--) {
+            System.out.println(newCharAt(testString, i));
+        }
+
     }
 
-    private static char newCharAt(String str,int index) {
+    private static char newCharAt(String str, int index) {
         if (index >= 0) {
-           return str.charAt(index);
-        } else if (index < 0) {
-            if (-index <= str.length()) {
+            return str.charAt(index);
+        } else {
+            // index = -8
+            int strLength = str.length(); // 4
+
+            if (-index <= strLength) {
                 int result;
-                result = str.length() +index;
+                result = strLength + index; // 3
                 return str.charAt(result);
             } else {
-                float i = (float) index/str.length();
-                i = (float) -(Math.ceil(i));
-                int result = (int) (index + i*str.length());
-                result = str.length() + result;
-                return str.charAt(result);
+                float i = (float) index / strLength; // -8 / 4 = -2
+                i = (float) -(Math.ceil(i)); // 2
+                int result = (int) (index + i * str.length());
+                if (index % str.length() == 0) {
+                    return str.charAt(result);
+                } else {
+                    result = str.length() + result;
+                    return str.charAt(result);
+                }
             }
-
         }
-        return 0;
     }
 
-
-
-
+//    private static char newCharAtVlad(String str, int index) {
+//        if (index >= 0) {
+//            return str.charAt(index);
+//        } else {
+//            // abcd
+//            // index = -8
+//            int strLength = str.length();
+//            int result;
+//
+//            int resultIndex = ;
+//
+//
+//            result = strLength + index;
+//            return str.charAt(result);
+//
+//        }
 }
+
+
+
