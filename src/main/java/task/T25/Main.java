@@ -56,15 +56,15 @@ class StudentNameComparator implements Comparator<Student> {
     @Override
     public int compare(Student o1, Student o2) {
         int result = o1.getName().compareTo(o2.getName());
-        return result - 2 * result;
+        return result * -1;
     }
 }
 
 
 public class Main {
     public static void main(String[] args) {
-        TreeSet<Student> ss = new TreeSet<>(new StudentNameComparator());
-        ss.add(new Student("Vitalja", 17 ,34));
+        TreeSet<Student> ss = new TreeSet<>();
+        ss.add(new Student("Ritalja", 17 ,34));
         ss.add(new Student("Daniel", 19 ,111111111));
         ss.add(new Student("Roman", 19 ,1));
         ss.add(new Student("Kolja", 10 ,2));

@@ -21,8 +21,14 @@ public class Main {
 //        int[] ints = new int[] {1, 2};
 //        System.out.println(ints); // [I@7b23ec81
 
-        String word = "";
-        System.out.println(word.length() == 0);
+//        String word = "";
+//        System.out.println(word.length() == 0);
+
+        // Вивести "word1", значення цієї змінної більше за значення змінної word2. Інакше - "word2"
+        String word1 = "Shrek";
+        String work2 = "Phiona";
+
+        System.out.println(word1.length() > work2.length() ? "word1" : "work2");
     }
 }
 

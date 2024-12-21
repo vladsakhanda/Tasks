@@ -16,13 +16,13 @@ public class A5 {
     static private String concatenation(ArrayList<String> strs) {
         String a = strs.get(0);
         for (int i = 0; i < strs.size(); i++) {
-            if (a.toString().length() > strs.get(i).toString().length()) {
+            if (a.length() > strs.get(i).toString().length()) {
                 a = strs.get(i);
             }
         }
         String b = strs.get(0);
         for (int i = 0; i < strs.size(); i++) {
-            if (b.toString().length() < strs.get(i).toString().length()) {
+            if (b.length() < strs.get(i).length()) {
                 b = strs.get(i);
             }
         }

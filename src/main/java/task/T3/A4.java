@@ -14,6 +14,7 @@ public class A4 {
         numbers.add(9);
         numbers.add(8);
         System.out.println(unicCount(numbers));
+        System.out.println(numbers);
     }
 
     static private int unicCount(ArrayList<Integer> numbers) {
