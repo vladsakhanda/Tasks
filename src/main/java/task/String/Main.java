@@ -1,7 +1,5 @@
 package task.String;
 
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
         // Рядок є незмінним. Тому при будь-якій зміні рядка - буде створений новий рядок під капотом, щоб забезпечити незмінність!
